@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Bootstrap Ass/bootstrap.css">
+</head>
+<body>
+    <div class="col-lg-7 col-md-7 col-sm-9 mt-lg-4 mt-md-4 mt-sm-2 mx-auto shadow p-4 rounded-3">
+        <h1 class=" fs-3 fw-bold text-primary text-center" style="margin-bottom: 20px;">Mini Calculator</h1>
+        <div class="form-group d-flex bg-light" style="margin-bottom: 20px;">
+            <input type="number" placeholder="input first value" class="form-control bg-primary" id="first" style="margin: 10px; font-size: 20px; font-weight: bold;"><input type="number" placeholder="input second value" class="form-control bg-primary" id="second" style="margin: 10px; font-size: 20px; font-weight: bold;">
+        </div>
+        <div class="text-center border border-1 border-info p-1 fs-4 fw-bold rounded-3 bg-light" id="result" style="margin-bottom: 20px;"><span class="text-light">0</span></div>
+        <div class="form-group d-flex justify-content-center align-items-center">
+            <button type="button" onclick="multiply()" class="btn btn-warning" style="margin: 10px;">multiply x</button>
+            <button type="button" onclick="divide()" class="btn btn-info" style="margin: 10px;">divide /</button>
+            <button type="button" onclick="add()" class="btn btn-success" style="margin: 10px;">addition +</button>
+            <button type="button" onclick="subtract()" class="btn btn-primary" style="margin: 10px;">subtraction -</button>
+        </div>
+    </div>
+
+   <script>
+       function multiply() {
+        var numberOne = document.getElementById("first").value;
+        var numberTwo = document.getElementById("second").value;
+        var answer = numberOne * numberTwo
+        result.innerHTML = answer;
+        if (numberOne == "" || numberTwo == "") {
+        var error = "please fill in the fields!!!"
+        result.innerHTML = error
+        result.style.color = "red"
+       }
+       }
+
+       function divide() {
+        var numberOne = document.getElementById("first").value;
+        var numberTwo = document.getElementById("second").value;
+        var answer = numberOne / numberTwo
+        result.innerHTML = answer;
+        if (numberOne == "" || numberTwo == "") {
+        var error = "please fill in the fields!!!"
+        result.innerHTML = error
+        result.style.color = "red"
+       }
+       }
+
+       function add() {
+        var numberOne = document.getElementById("first").value;
+        var numberTwo = document.getElementById("second").value;
+        var answer = (Number(numberOne) + Number(numberTwo));
+        result.innerHTML = answer;
+        if (numberOne == "" || numberTwo == "") {
+        var error = "please fill in the fields!!!"
+        result.innerHTML = error
+        result.style.color = "red"
+       }
+       }
+
+       function subtract() {
+        var numberOne = document.getElementById("first").value;
+        var numberTwo = document.getElementById("second").value;
+        var answer = numberOne - numberTwo
+        result.innerHTML = answer;
+       if (numberOne == "" || numberTwo == "") {
+        var error = "please fill in the fields!!!"
+        result.innerHTML = error
+        result.style.color = "red"
+       }
+    }
+   </script>
+</body>
+</html>
